@@ -13,7 +13,6 @@ const Authorization = async (req, res, next) => {
         const user = verify(token, process.env.TOKEN_SECRET)
 
         req.user = user
-        console.log(req.user)
         next()
 
     } catch(err) {
